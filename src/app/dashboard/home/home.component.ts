@@ -4,7 +4,7 @@ import { Component, OnInit, trigger, state, style, transition, animate } from '@
 declare var $:any;
 
 @Component({
-    selector: 'home-cmp',
+    selector: 'home-compo',
     moduleId: module.id,
     templateUrl: 'home.component.html'
 })

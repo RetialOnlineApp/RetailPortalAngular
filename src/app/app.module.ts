@@ -5,6 +5,11 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {FooterComponent } from './shared/footer/footer.component';
+import {NavbarComponent} from './shared/navbar/navbar.component';
+import {SidebarComponent} from './shared/sidebar/sidebar.component';
+import {HomeComponent} from './dashboard/home/home.component'
+
 
 
 
@@ -12,11 +17,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 	declarations: [
 		AppComponent,
 		LoginComponent,
-		DashboardComponent
+		DashboardComponent,
+		FooterComponent,
+		NavbarComponent,
+		SidebarComponent,
+		HomeComponent
+
 	],
 	imports: [
 		BrowserModule,
-		RouterModule.forRoot([
+/*		RouterModule.forRoot([
 			{
 				path: 'login',
 				component: LoginComponent
@@ -31,9 +41,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 				pathMatch: 'full'
 			},
 
-		])
+		])*/
 	],
 	providers: [],
-	bootstrap: [LoginComponent]
+	bootstrap: [DashboardComponent]
 })
 export class AppModule { }
