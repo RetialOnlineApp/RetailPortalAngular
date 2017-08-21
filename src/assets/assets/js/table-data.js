@@ -1,4 +1,4 @@
-alert("mad potta");
+
 var TableData = function() {
 	"use strict";
 	//function to initiate DataTable
