@@ -3,21 +3,18 @@ import { DashboardComponent } from './dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { AddProductComponent } from './products/add/add-product.component';
 import { EditProductComponent } from './products/edit/edit-product.component';
-/*import { TableComponent } from './table/table.component';
-import { NotificationsComponent } from './notifications/notifications.component';
-import { TypographyComponent } from './typography/typography.component';
-import { MapsComponent } from './maps/maps.component';
-import { UpgradeComponent } from './upgrade/upgrade.component';*/
+import { ManageOrdersComponent } from './orders/manage-orders/manage-orders.component';
+import { InvoicesComponent } from './orders/invoices/invoices.component';
+import { SupportComponent } from './support/support.component';
+
 
 export const MODULE_ROUTES: Route[] =[
     { path: 'dashboard', component: HomeComponent },
     { path: 'addproduct', component: AddProductComponent },
     { path: 'editproduct', component: EditProductComponent },
-    /*{ path: 'icons', component: IconsComponent },
-    { path: 'notifications', component: NotificationsComponent },
-    { path: 'typography', component: TypographyComponent },
-    { path: 'maps', component: MapsComponent },
-    { path: 'upgrade', component: UpgradeComponent },*/
+    { path: 'manageorders', component: ManageOrdersComponent },
+    { path: 'invoices', component: InvoicesComponent },
+    { path: 'support', component: SupportComponent },
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
 ]
 
@@ -25,11 +22,7 @@ export const MODULE_COMPONENTS = [
     HomeComponent,
     AddProductComponent,
     EditProductComponent,
-   /* UserComponent,
-    TableComponent,
-    IconsComponent,
-    NotificationsComponent,
-    TypographyComponent,
-    MapsComponent,
-    UpgradeComponent*/
+    InvoicesComponent,
+    ManageOrdersComponent,
+    SupportComponent
 ]
