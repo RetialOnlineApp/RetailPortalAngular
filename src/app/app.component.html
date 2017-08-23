@@ -1,4 +1,8 @@
-<div id="app">
+<div *ngIf="isLogin">
+  <login-cmp></login-cmp>
+</div> 
+
+<div id="app" *ngIf="!isLogin">
   <sidebar-cmp></sidebar-cmp>
   <div class="app-content">
     <navbar-cmp></navbar-cmp>

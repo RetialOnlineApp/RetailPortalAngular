@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-	selector: 'app-root',
+	selector: 'login-cmp',
 	templateUrl: 'login.component.html'
 })
 export class LoginComponent {

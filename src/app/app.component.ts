@@ -10,6 +10,7 @@ declare var $:any;
 })
 
 export class AppComponent {
+    isLogin = true;
     location: Location;
     constructor(location:Location) {
         this.location = location;
