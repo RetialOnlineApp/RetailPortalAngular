@@ -8,5 +8,6 @@ import { Component, HostBinding } from '@angular/core';
 })
 
 export class AddProductComponent {
+	navClass = 'active';
 
 }

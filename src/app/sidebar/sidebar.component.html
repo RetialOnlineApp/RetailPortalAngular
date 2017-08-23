@@ -1,24 +1,6 @@
 <div class="sidebar app-aside" id="sidebar">
   <div class="sidebar-container perfect-scrollbar">
     <nav>
-      <!-- start: SEARCH FORM -->
-      <div class="search-form">
-        <a class="s-open" href="#">
-                                <i class="ti-search"></i>
-                            </a>
-        <form class="navbar-form" role="search">
-          <a class="s-remove" href="#" target=".navbar-form">
-                                    <i class="ti-close"></i>
-                                </a>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search...">
-            <button class="btn search-button" type="submit">
-              <i class="ti-search"></i>
-            </button>
-          </div>
-        </form>
-      </div>
-      <!-- end: SEARCH FORM -->
       <!-- start: MAIN NAVIGATION MENU -->
       <div class="navbar-title">
         <span>Main Navigation</span>
@@ -37,7 +19,7 @@
           </a>
         </li>
         <li>
-          <a href="javascript:void(0)">
+          <a>
             <div class="item-content">
               <div class="item-media">
                 <i class="ti-settings"></i>
@@ -50,18 +32,18 @@
           <ul class="sub-menu">
             <li>
               <a href="/#/editproduct">
-                                            <span class="title"> Edit Products</span>
-                                        </a>
+                  <span class="title"> Edit Products</span>
+              </a>
             </li>
-            <li>
+            <li class={{navClass}}>
               <a href="/#/addproduct">
-                                            <span class="title"> Add Products </span>
-                                        </a>
+                  <span class="title"> Add Products </span>
+              </a>
             </li>
           </ul>
         </li>
         <li>
-          <a href="javascript:void(0)">
+          <a>
             <div class="item-content">
               <div class="item-media">
                 <i class="ti-layout-grid2"></i>
@@ -73,29 +55,22 @@
           </a>
           <ul class="sub-menu">
             <li>
-              <a href="manage_orders.html">
-                                            <span class="title">Manage Orders</span>
-                                        </a>
+              <a href="/#/manageorders">
+                  <span class="title">Manage Orders</span>
+              </a>
             </li>
             <li>
-              <a href="invoices.html">
-                                            <span class="title">Invoices</span>
-                                        </a>
+              <a href="/#/invoices">
+                  <span class="title">Invoices</span>
+              </a>
             </li>
           </ul>
         </li>
-      </ul>
-      <!-- end: MAIN NAVIGATION MENU -->
-      <!-- start: CORE FEATURES -->
-      <div class="navbar-title">
-        <span>Retail Features</span>
-      </div>
-      <ul class="folders">
-        <li>
-          <a href="pages_calendar.html">
+        <li class="">
+          <a href="dashboard.html">
             <div class="item-content">
               <div class="item-media">
-                <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-terminal fa-stack-1x fa-inverse"></i> </span>
+                <i class="ti-home"></i>
               </div>
               <div class="item-inner">
                 <span class="title"> Billing </span>
@@ -104,19 +79,19 @@
           </a>
         </li>
         <li>
-          <a href="support.html">
+          <a href="/#/support">
             <div class="item-content">
               <div class="item-media">
-                <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-folder-open-o fa-stack-1x fa-inverse"></i> </span>
+                <i class="ti-home"></i>
               </div>
               <div class="item-inner">
-                <span class="title"> Support </span>
+                <span class="title"> Help </span>
               </div>
             </div>
           </a>
         </li>
       </ul>
-      <!-- end: CORE FEATURES -->
+      <!-- end: MAIN NAVIGATION MENU -->
     </nav>
   </div>
 </div>
