@@ -15,7 +15,7 @@ export const MODULE_ROUTES: Route[] =[
     { path: 'manageorders', component: ManageOrdersComponent },
     { path: 'invoices', component: InvoicesComponent },
     { path: 'support', component: SupportComponent },
-    { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
+    
 ]
 
 export const MODULE_COMPONENTS = [

@@ -28,6 +28,11 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
             {
                 path: 'login',
                 component: LoginComponent
+            },
+             {
+                path: '',
+                redirectTo: '/login',
+                pathMatch: 'full'
             }
         ])
     ],

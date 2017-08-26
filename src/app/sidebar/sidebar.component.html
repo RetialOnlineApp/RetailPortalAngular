@@ -1,13 +1,31 @@
 <div class="sidebar app-aside" id="sidebar">
   <div class="sidebar-container perfect-scrollbar">
     <nav>
+      <!-- start: SEARCH FORM -->
+      <div class="search-form">
+        <a class="s-open" href="#">
+                                <i class="ti-search"></i>
+                            </a>
+        <form class="navbar-form" role="search">
+          <a class="s-remove" href="#" target=".navbar-form">
+                                    <i class="ti-close"></i>
+                                </a>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search...">
+            <button class="btn search-button" type="submit">
+              <i class="ti-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- end: SEARCH FORM -->
       <!-- start: MAIN NAVIGATION MENU -->
       <div class="navbar-title">
         <span>Main Navigation</span>
       </div>
       <ul class="main-navigation-menu">
         <li class="active open">
-          <a href="dashboard.html">
+          <a href="/#/dashboard">
             <div class="item-content">
               <div class="item-media">
                 <i class="ti-home"></i>
@@ -19,7 +37,7 @@
           </a>
         </li>
         <li>
-          <a>
+          <a href="javascript:void(0)">
             <div class="item-content">
               <div class="item-media">
                 <i class="ti-settings"></i>
@@ -32,18 +50,18 @@
           <ul class="sub-menu">
             <li>
               <a href="/#/editproduct">
-                  <span class="title"> Edit Products</span>
-              </a>
+                                            <span class="title"> Edit Products</span>
+                                        </a>
             </li>
-            <li class={{navClass}}>
+            <li>
               <a href="/#/addproduct">
-                  <span class="title"> Add Products </span>
-              </a>
+                                            <span class="title"> Add Products </span>
+                                        </a>
             </li>
           </ul>
         </li>
         <li>
-          <a>
+          <a href="javascript:void(0)">
             <div class="item-content">
               <div class="item-media">
                 <i class="ti-layout-grid2"></i>
@@ -56,18 +74,18 @@
           <ul class="sub-menu">
             <li>
               <a href="/#/manageorders">
-                  <span class="title">Manage Orders</span>
-              </a>
+                                            <span class="title">Manage Orders</span>
+                                        </a>
             </li>
             <li>
               <a href="/#/invoices">
-                  <span class="title">Invoices</span>
-              </a>
+                                            <span class="title">Invoices</span>
+                                        </a>
             </li>
           </ul>
         </li>
         <li class="">
-          <a href="dashboard.html">
+          <a href="/#/dashboard">
             <div class="item-content">
               <div class="item-media">
                 <i class="ti-home"></i>
@@ -78,7 +96,7 @@
             </div>
           </a>
         </li>
-        <li>
+         <li class="">
           <a href="/#/support">
             <div class="item-content">
               <div class="item-media">
