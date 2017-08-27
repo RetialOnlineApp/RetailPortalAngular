@@ -11,8 +11,9 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { SidebarModule } from './sidebar/sidebar.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { NavbarModule } from './shared/navbar/navbar.module';
-import { LoginModule } from './login/login.module';
-
+import {SignupComponent} from './login/signup/signup.component';
+/*import { LoginModule } from './login/login.module';
+*/
 
 
 @NgModule({
@@ -29,13 +30,17 @@ import { LoginModule } from './login/login.module';
                 component: LoginComponent
             },
             {
+                path: 'signup',
+                component: SignupComponent
+            },
+            {
                 path: '',
                 redirectTo: '/login',
                 pathMatch: 'full'
             }
         ])
     ],
-    declarations: [AppComponent, DashboardComponent, LoginComponent],
+    declarations: [AppComponent, DashboardComponent, LoginComponent, SignupComponent],
     providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
     bootstrap: [AppComponent]
 })
