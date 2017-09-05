@@ -15,10 +15,6 @@ import { SignupComponent } from './login/signup/signup.component';
 import { LoginModule } from './login/login.module';
 import {HttpClientModule} from '@angular/common/http';
 
-
-
-
-
 @NgModule({
     imports: [
         HttpClientModule,

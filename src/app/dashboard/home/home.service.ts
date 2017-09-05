@@ -9,12 +9,28 @@ import { Observable } from 'rxjs/Observable';
 export class HomeService {
 
   public headers = new Headers({ 'Content-Type': 'application/json' });
-
+  results: string[];
 
   constructor(private http: HttpClient) { }
 
-   public getAll<T>(): Observable<T> {
-        return this.http.get<T>("https://jsonplaceholder.typicode.com/posts/1");
-    }
+  getPeople(): void {
+    this.http.get('https://jsonplaceholder.typicode.com/posts/2', this.headers).
+      subscribe(
+      data => {
+        this.results = data as string[];
+      },
+      err => {
+        console.log("=======================" + JSON.stringify(err["status"]));
+      });
+
+    alert(this.results);
+    console.log("===========================" + JSON.stringify(this.results['userId']));
+  }
+
+  getDemo() : string[] {
+  	this.getPeople();
+  	return this.results;
+  }
+
 
 }
