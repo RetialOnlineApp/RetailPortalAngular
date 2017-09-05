@@ -1,6 +1,5 @@
 import { Component, OnInit, trigger, state, style, transition, animate } from '@angular/core';
-//import initIndex = require('../../../assets/assets/js/charts.js');
-//import initMain = require('../../../assets/assets/js/index.js');
+import { HttpClient } from '@angular/common/http';
 
 
 declare var $:any;
@@ -12,14 +11,21 @@ declare var $:any;
 })
 
 export class HomeComponent implements OnInit{
-    ngOnInit(){
-        // $('[data-toggle="checkbox"]').each(function () {
-        //     if($(this).data('toggle') == 'switch') return;
-        //
-        //     var $checkbox = $(this);
-        //     $checkbox.checkbox();
-        // });
-        //initIndex();
-        //initMain();
-    }
+    results: string;
+ 
+  // Inject HttpClient into your component or service.
+  constructor(private http: HttpClient) {}
+ 
+  ngOnInit(): void {
+    // Make the HTTP request:
+    this.http.get('https://jsonplaceholder.typicode.com/posts/2/l').subscribe(data => {
+      // Read the result field from the JSON response.
+      this.results = data as string;
+    },
+    err  => {
+        console.log("======================="+JSON.stringify(err["status"]));
+    });
+    alert(this.results);
+    console.log("==========================="+JSON.stringify(this.results['userId']));
+  }
 }

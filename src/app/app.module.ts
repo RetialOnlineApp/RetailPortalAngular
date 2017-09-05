@@ -13,11 +13,15 @@ import { FooterModule } from './shared/footer/footer.module';
 import { NavbarModule } from './shared/navbar/navbar.module';
 import { SignupComponent } from './login/signup/signup.component';
 import { LoginModule } from './login/login.module';
+import {HttpClientModule} from '@angular/common/http';
+
+
 
 
 
 @NgModule({
     imports: [
+        HttpClientModule,
         BrowserModule,
         DashboardModule,
         SidebarModule,
