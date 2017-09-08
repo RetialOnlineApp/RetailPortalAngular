@@ -19,10 +19,8 @@ import { CommonModule } from '@angular/common';
     imports: [
         HttpClientModule,
         BrowserModule,
-        FormsModule,
         DashboardModule,
         SidebarModule,
-        CommonModule,
         NavbarModule,
         FooterModule,
         LoginModule,

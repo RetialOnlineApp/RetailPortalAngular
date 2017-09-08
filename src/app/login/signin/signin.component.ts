@@ -1,29 +1,42 @@
 import { Component, OnInit } from '@angular/core';
 import { SignInService } from './signin.service';
+import { Router } from '@angular/router'
+
 @Component({
 	selector: 'signin-cmp',
 	templateUrl: 'signin.component.html',
 	providers: [SignInService]
 })
 
-export class SigninComponent implements OnInit {
+export class SigninComponent {
 
-	public userName = "";
+	public email = "";
 	public password = "";
 
-	constructor(private service: SignInService) { }
+	constructor(private service: SignInService, private router: Router) { }
 
-	ngOnInit(): void {
-		let token = this.service.getAccessToken("munjewar_vivek@tecnics.com", "12345");
-		alert(token);
-		console.log("================================" + token);
+	onLogin() {
+		let accessToken = "";
+		this.service.getAccessToken(this.email, this.password).subscribe(
+			data => {
+				console.log("data :::", data);
+				accessToken = data["accessToken"];
+				localStorage.setItem('accessToken', accessToken);
+				localStorage.setItem('user', this.email);
+
+			},
+			error => {
+				console.log("error status", error.status);
+			},
+			() => {
+				this.navigeToDashboard();
+			});
 
 	}
 
-	onLogin(){
-		console.log("User Name",this.userName);
-		console.log("PassWord",this.password);
-		alert(this.userName +"  "+ this.password);
+
+	navigeToDashboard() {
+		this.router.navigateByUrl('dashboard');
 	}
 
 }

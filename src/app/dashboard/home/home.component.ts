@@ -1,6 +1,6 @@
 import { Component, OnInit, trigger, state, style, transition, animate } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {HomeService} from './home.service';
+import { HomeService } from './home.service';
 
 
 declare var $: any;
@@ -12,13 +12,10 @@ declare var $: any;
     providers: [HomeService]
 })
 
-export class HomeComponent implements OnInit {
+export class HomeComponent {
     results: string[];
 
     constructor(private service: HomeService) { }
 
-    ngOnInit(): void {
-        this.results = this.service.getDemo();
-        alert(JSON.stringify(this.results))
-    }
+
 }

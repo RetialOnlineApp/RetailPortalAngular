@@ -11,28 +11,15 @@ import { User } from './user';
 export class SignInService {
 
   public headers = new Headers({ 'Content-Type': 'application/json' });
-  accessToken: String;
+  accessToken: string;
 
 
   constructor(private http: HttpClient) { }
 
 
-  getAccessToken(email: String, password: String): void {
-    this.http.post("http://localhost:8080/api/auth/accessToken", { "email": email, "password": password }, this.headers)
-      .subscribe(
-      res => {
-        this.accessToken = res['accessToken'];
-        console.log("Got Access Token :::",this.accessToken)
-      },
-      err => {
-        console.log("error occured while signin" + err.toString());
-      });
-  }
+  getAccessToken(email: String, password: String) {
+    return this.http.post("http://localhost:8080/api/auth/accessToken", { "email": email, "password": password }, this.headers)
 
-  signupUser(): void {
 
   }
-
-
-
 }
